@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery System - Activity Diagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="diagram-header">
+            <h1>Food Delivery System - Activity Diagram</h1>
+            <p>Interactive UML-style workflow diagram showing the complete food delivery process</p>
+        </header>
+        
+        <div class="diagram-container">
+            <div class="swimlane-headers">
+                <div class="swimlane-header" data-lane="customer">Customer</div>
+                <div class="swimlane-header" data-lane="app">Food Delivery App</div>
+                <div class="swimlane-header" data-lane="restaurant">Restaurant</div>
+                <div class="swimlane-header" data-lane="agent">Delivery Agent</div>
+                <div class="swimlane-header" data-lane="payment">Payment Gateway</div>
+            </div>
+            
+            <div class="diagram-content">
+                <svg id="activity-diagram" viewBox="0 0 800 750" preserveAspectRatio="xMidYMin meet">
+                    <!-- Swimlane backgrounds -->
+                    <g id="swimlane-backgrounds"></g>
+                    <!-- Connection lines -->
+                    <g id="connections"></g>
+                    <!-- Activities -->
+                    <g id="activities"></g>
+                    <!-- Arrow markers -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                                refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Activity details tooltip -->
+        <div id="activity-tooltip" class="activity-tooltip hidden">
+            <div class="tooltip-content">
+                <h3 id="tooltip-title"></h3>
+                <p id="tooltip-description"></p>
+                <span id="tooltip-lane"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
